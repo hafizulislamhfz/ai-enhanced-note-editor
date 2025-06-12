@@ -7,7 +7,7 @@ export default function AppLogo() {
                 <AppLogoIcon className="size-7 rounded-2xl text-white dark:text-black" />
             </div>
             <div className="ml-1 grid flex-1 text-left text-lg">
-                <span className="mb-0.5 truncate leading-tight font-semibold">NoteAi</span>
+                <span className="mb-0.5 truncate leading-tight font-semibold">NoteAI</span>
             </div>
         </>
     );

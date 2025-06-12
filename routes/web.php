@@ -1,16 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+require __DIR__.'/web/auth/auth.php';
 
-Route::get('/', function () {
-    return Inertia::render('welcome');
-})->name('home');
+require __DIR__.'/web/guest/home.php';
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
-    })->name('dashboard');
-});
-
-require __DIR__.'/web/auth.php';
+require __DIR__.'/web/dashboard/index.php';

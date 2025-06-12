@@ -41,3 +41,13 @@ export interface User {
     updated_at: string;
     [key: string]: unknown; // This allows for additional properties...
 }
+
+export interface Note {
+    id: number;
+    user_id: number;
+    title: string;
+    content: string;
+    is_pinned?: boolean;
+    created_at: string;
+    updated_at: string;
+}
