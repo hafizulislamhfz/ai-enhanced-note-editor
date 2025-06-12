@@ -13,7 +13,7 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
-        title: 'Notes',
+        title: 'My Notes',
         href: '/notes',
         icon: FileText,
     },
