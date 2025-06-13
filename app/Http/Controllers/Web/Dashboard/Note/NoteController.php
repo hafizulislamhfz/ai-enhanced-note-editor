@@ -22,7 +22,7 @@ class NoteController extends Controller
     {
         $validatedData = $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'content' => ['nullable', 'string'],
+            'content' => ['required', 'string', 'max:10000'],
         ]);
 
         $request->user()->notes()->create($validatedData);
@@ -36,7 +36,7 @@ class NoteController extends Controller
 
         $validatedData = $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'content' => ['required', 'string'],
+            'content' => ['required', 'string', 'max:10000'],
         ]);
 
         $note->update($validatedData);
