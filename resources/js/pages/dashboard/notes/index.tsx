@@ -7,7 +7,12 @@ import DeleteNoteModal from './partials/delete';
 import NoteList from './partials/list';
 
 interface NotesPageProps {
-    notes: Note[];
+    notes: {
+        data: Note[];
+        current_page: number;
+        last_page: number;
+        links: { url: string | null; label: string; active: boolean }[];
+    };
     [key: string]: unknown;
 }
 

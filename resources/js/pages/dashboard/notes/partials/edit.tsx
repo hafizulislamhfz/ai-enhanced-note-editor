@@ -61,7 +61,7 @@ export default function NoteEdit({ note }: NoteEditProps) {
                 <label className="font-medium text-gray-900 dark:text-gray-100">Title: </label>
                 <br />
                 <textarea
-                    className="w-full resize-none overflow-hidden rounded bg-transparent py-1 whitespace-pre-wrap text-gray-900 hover:ring-2 hover:ring-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-gray-100"
+                    className="w-full resize-none overflow-hidden rounded bg-transparent py-1 whitespace-pre-wrap text-gray-900 hover:ring-1 hover:ring-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-gray-100"
                     value={title}
                     rows={1}
                     onChange={handleTitleChange}
@@ -75,7 +75,7 @@ export default function NoteEdit({ note }: NoteEditProps) {
                 <label className="font-medium text-gray-900 dark:text-gray-100">Content: </label>
                 <br />
                 <textarea
-                    className="w-full resize-none overflow-hidden rounded bg-transparent py-1 whitespace-pre-wrap text-gray-900 hover:ring-2 hover:ring-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-gray-100"
+                    className="w-full resize-none overflow-hidden rounded bg-transparent py-1 whitespace-pre-wrap text-gray-900 hover:ring-1 hover:ring-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-gray-100"
                     value={content}
                     rows={1}
                     onChange={handleContentChange}

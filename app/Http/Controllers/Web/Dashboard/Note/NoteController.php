@@ -9,9 +9,21 @@ use Inertia\Inertia;
 
 class NoteController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $notes = auth()->user()->notes()->latest()->get();
+        $page = $request->query('page', 1);
+        $perPage = $request->query('per_page', 5);
+        $search = $request->query('search');
+
+        $notes = auth()->user()->notes()
+            ->when($search, function ($query, $search) {
+                $query->where(function ($q) use ($search) {
+                    $q->where('title', 'like', "%{$search}%")
+                        ->orWhere('content', 'like', "%{$search}%");
+                });
+            })
+            ->latest()->paginate(perPage: $perPage, page: $page)
+            ->withQueryString();
 
         return Inertia::render('dashboard/notes/index', [
             'notes' => $notes,
